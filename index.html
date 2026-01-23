@@ -47,42 +47,60 @@
 <section id="projects">
   <h2>Key Projects</h2>
 
-  <div class="project-card">
-    <h3>Hybrid Vedic–Karatsuba Multiplier</h3>
-    <p>
-      Designed a high-speed multiplier combining Vedic and Karatsuba algorithms. 
-      Integrated Kogge-Stone Adder, Booth Encoding, and Wallace Tree optimization. 
-      Implemented on FPGA using Verilog.
-    </p>
+  <!-- Sri Haram Flagship -->
+  <div class="project-card highlight">
+    <h3>Sri Haram – Concept Architecture for Learning AI Hardware Core</h3>
+    <ul>
+      <li>Proposed a conceptual hardware architecture integrating classical digital logic with emerging computing paradigms for adaptive learning tasks.</li>
+      <li>Defined modular blocks for learning engine, decision logic, memory management, and control unit inspired by brain-inspired computing models.</li>
+      <li>Created high-level RTL block diagrams and dataflow architecture targeting future AI accelerator chips.</li>
+      <li>Studied feasibility of integrating nanoscale device concepts with CMOS-based control logic for scalable intelligent hardware.</li>
+    </ul>
+    <p><b>Focus:</b> AI Accelerator Architecture • Nano-scale Integration • Learning Hardware</p>
   </div>
 
+  <!-- FSM Handshake -->
   <div class="project-card">
-    <h3>IoT Gas Leakage Detection System</h3>
-    <p>
-      IoT-based real-time gas detection with automatic cut-off for industrial and home safety.
-    </p>
+    <h3>FSM-Based Handshake Data Transfer Controller</h3>
+    <ul>
+      <li>Designed valid–ready handshake controller using Mealy/Moore FSMs for timing-safe data communication.</li>
+      <li>Implemented synthesizable Verilog RTL and verified using self-checking testbench.</li>
+      <li>Ensured glitch-free control signaling and protocol-compliant data transfer.</li>
+    </ul>
+    <p><b>Tools:</b> Verilog, ModelSim, Vivado</p>
   </div>
 
+  <!-- Asynchronous FIFO -->
   <div class="project-card">
-    <h3>Emotion Detection IC Concept</h3>
-    <p>
-      Conceptual biometric IC integrating sensors and digital processing for emotion detection.
-    </p>
+    <h3>Asynchronous FIFO with Clock Domain Crossing</h3>
+    <ul>
+      <li>Developed dual-clock FIFO using Gray-code pointers and two-flop synchronizers.</li>
+      <li>Verified full/empty flag accuracy and data integrity under asynchronous clock conditions.</li>
+      <li>Achieved metastability-safe data transfer across independent clock domains.</li>
+    </ul>
+    <p><b>Tools:</b> Verilog, ModelSim</p>
+  </div>
+
+  <!-- Pipelined ALU -->
+  <div class="project-card">
+    <h3>Parameterized Pipelined ALU</h3>
+    <ul>
+      <li>Designed parameterized pipelined ALU supporting configurable data widths.</li>
+      <li>Reduced critical path delay through pipeline stage insertion.</li>
+      <li>Validated throughput improvement using synthesis and timing analysis.</li>
+    </ul>
+    <p><b>Tools:</b> Verilog, Vivado</p>
+  </div>
+
+  <!-- RTL Integration -->
+  <div class="project-card">
+    <h3>RTL Subsystem Integration Practice</h3>
+    <ul>
+      <li>Integrated multiple RTL modules at top-level hierarchy.</li>
+      <li>Resolved interface mismatches and hierarchical connectivity issues.</li>
+      <li>Practiced SoC-style module integration and release-ready RTL structuring.</li>
+    </ul>
+    <p><b>Tools:</b> Verilog, ModelSim</p>
   </div>
 
 </section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: adhithyavaradhan@gmail.com</p>
-  <p>Phone: +91 9442384936</p>
-  <p>Location: Tamil Nadu, India</p>
-</section>
-
-<footer>
-  <p>© 2026 Adhithyavaradhan | VLSI Portfolio</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
