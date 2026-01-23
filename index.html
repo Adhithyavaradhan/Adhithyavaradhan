@@ -8,8 +8,6 @@
 </head>
 <body>
 
-</section>
-
 <header>
   <h1>Adhithyavaradhan</h1>
   <p>Digital Design & VLSI Engineer</p>
@@ -27,9 +25,10 @@
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I am a Final Year ECE student at Erode Sengunthar Engineering College. 
-    I specialize in VLSI Digital Design, RTL Development, and FPGA implementation. 
-    My goal is to become a Digital Design Engineer contributing to high-performance chip architectures.
+    I am a final year B.E. Electronics and Communication Engineering student at 
+    Erode Sengunthar Engineering College. I specialize in VLSI Digital Design, 
+    RTL Development, and FPGA implementation. My goal is to become a 
+    Digital Design Engineer contributing to high-performance chip architectures.
   </p>
 
   <a class="btn" href="resume.pdf" download>Download Resume</a>
@@ -40,44 +39,46 @@
   <div class="grid">
     <div class="card">Verilog / SystemVerilog</div>
     <div class="card">RTL Design & FSM</div>
+    <div class="card">Clock Domain Crossing (CDC)</div>
     <div class="card">Digital Arithmetic Architecture</div>
     <div class="card">CMOS & VLSI Concepts</div>
     <div class="card">FPGA (Xilinx Vivado)</div>
+    <div class="card">ModelSim Simulation</div>
   </div>
 </section>
 
 <section id="projects">
   <h2>Key Projects</h2>
 
-  <!-- Sri Haram Flagship -->
+  <!-- Sri Haram -->
   <div class="project-card highlight">
     <h3>Sri Haram – Concept Architecture for Learning AI Hardware Core</h3>
     <ul>
-      <li>Proposed a conceptual hardware architecture integrating classical digital logic with emerging computing paradigms for adaptive learning tasks.</li>
-      <li>Defined modular blocks for learning engine, decision logic, memory management, and control unit inspired by brain-inspired computing models.</li>
-      <li>Created high-level RTL block diagrams and dataflow architecture targeting future AI accelerator chips.</li>
-      <li>Studied feasibility of integrating nanoscale device concepts with CMOS-based control logic for scalable intelligent hardware.</li>
+      <li>Proposed conceptual hardware architecture integrating digital logic with emerging computing paradigms for adaptive learning.</li>
+      <li>Defined modular blocks for learning engine, decision logic, memory management, and control unit inspired by brain-inspired models.</li>
+      <li>Created high-level RTL block diagrams and dataflow for future AI accelerator chips.</li>
+      <li>Studied nanoscale device integration with CMOS-based control logic for scalable intelligent hardware.</li>
     </ul>
-    <p><b>Focus:</b> AI Accelerator Architecture • Nano-scale Integration • Learning Hardware</p>
+    <p><b>Focus:</b> AI Accelerator • Nano-scale Integration • Learning Hardware</p>
   </div>
 
   <!-- FSM Handshake -->
   <div class="project-card">
     <h3>FSM-Based Handshake Data Transfer Controller</h3>
     <ul>
-      <li>Designed valid–ready handshake controller using Mealy/Moore FSMs for timing-safe data communication.</li>
+      <li>Designed valid–ready handshake controller using Mealy/Moore FSMs.</li>
       <li>Implemented synthesizable Verilog RTL and verified using self-checking testbench.</li>
       <li>Ensured glitch-free control signaling and protocol-compliant data transfer.</li>
     </ul>
     <p><b>Tools:</b> Verilog, ModelSim, Vivado</p>
   </div>
 
-  <!-- Asynchronous FIFO -->
+  <!-- Async FIFO -->
   <div class="project-card">
     <h3>Asynchronous FIFO with Clock Domain Crossing</h3>
     <ul>
       <li>Developed dual-clock FIFO using Gray-code pointers and two-flop synchronizers.</li>
-      <li>Verified full/empty flag accuracy and data integrity under asynchronous clock conditions.</li>
+      <li>Verified full/empty flag accuracy and data integrity under asynchronous clocks.</li>
       <li>Achieved metastability-safe data transfer across independent clock domains.</li>
     </ul>
     <p><b>Tools:</b> Verilog, ModelSim</p>
