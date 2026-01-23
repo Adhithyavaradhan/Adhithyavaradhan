@@ -49,6 +49,10 @@ nav a {
   text-decoration: none;
 }
 
+nav a:hover {
+  color: #4fc3f7;
+}
+
 section {
   padding: 30px;
   width: 85%;
@@ -74,6 +78,7 @@ h2 {
   padding: 15px;
   border-radius: 8px;
   text-align: center;
+  font-weight: bold;
 }
 
 .project-card {
@@ -81,6 +86,19 @@ h2 {
   padding: 15px;
   margin: 15px 0;
   border-radius: 8px;
+}
+
+.dark .project-card {
+  background: #2a2a2a;
+}
+
+.highlight {
+  border-left: 5px solid var(--primary);
+  background: linear-gradient(135deg, #e8f4ff, var(--card));
+}
+
+.dark .highlight {
+  background: linear-gradient(135deg, #1a1a1a, #222);
 }
 
 .btn {
