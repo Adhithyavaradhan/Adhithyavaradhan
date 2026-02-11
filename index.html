@@ -1,124 +1,602 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adhithyavaradhan | VLSI Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adhithyavaradhan | Digital Design & VLSI Engineer</title>
+  <meta name="description" content="Portfolio of Adhithyavaradhan, Digital Design & VLSI Engineer specializing in RTL, FPGA, CDC, and digital arithmetic architectures." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Floating Navigation Bar -->
+  <header class="nav-header">
+    <nav class="nav container">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-chip"></span>
+        <span class="nav__logo-text">Adhithyavaradhan</span>
+      </a>
 
-<header>
-  <h1>Adhithyavaradhan</h1>
-  <p>Digital Design & VLSI Engineer</p>
-  <button onclick="toggleMode()">🌙 Toggle Mode</button>
-</header>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span><span></span>
+      </button>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#contact">Contact</a>
-</nav>
+      <ul class="nav__links">
+        <li><a href="#hero" class="nav__link active">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#certifications" class="nav__link">Certifications</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a final year B.E. Electronics and Communication Engineering student at 
-    Erode Sengunthar Engineering College. I specialize in VLSI Digital Design, 
-    RTL Development, and FPGA implementation. My goal is to become a 
-    Digital Design Engineer contributing to high-performance chip architectures.
-  </p>
+  <!-- Main Content -->
+  <main>
+    <!-- Animated Chip SVG Background -->
+    <div class="chip-bg" aria-hidden="true">
+      <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="chipStroke" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00CFFF" />
+            <stop offset="100%" stop-color="#8A2BE2" />
+          </linearGradient>
+        </defs>
 
-  <a class="btn" href="resume.pdf" download>Download Resume</a>
-</section>
+        <!-- Core chip -->
+        <rect x="320" y="220" width="160" height="120" rx="10" class="chip-core" />
 
-<section id="skills">
-  <h2>Core Skills</h2>
-  <div class="grid">
-    <div class="card">Verilog / SystemVerilog</div>
-    <div class="card">RTL Design & FSM</div>
-    <div class="card">Clock Domain Crossing (CDC)</div>
-    <div class="card">Digital Arithmetic Architecture</div>
-    <div class="card">CMOS & VLSI Concepts</div>
-    <div class="card">FPGA (Xilinx Vivado)</div>
-    <div class="card">ModelSim Simulation</div>
-  </div>
-</section>
+        <!-- Pins -->
+        <g class="chip-pins">
+          <!-- Top pins -->
+          <rect x="340" y="200" width="10" height="20" rx="2" />
+          <rect x="360" y="200" width="10" height="20" rx="2" />
+          <rect x="380" y="200" width="10" height="20" rx="2" />
+          <rect x="400" y="200" width="10" height="20" rx="2" />
+          <rect x="420" y="200" width="10" height="20" rx="2" />
+          <rect x="440" y="200" width="10" height="20" rx="2" />
+          <!-- Bottom pins -->
+          <rect x="340" y="340" width="10" height="20" rx="2" />
+          <rect x="360" y="340" width="10" height="20" rx="2" />
+          <rect x="380" y="340" width="10" height="20" rx="2" />
+          <rect x="400" y="340" width="10" height="20" rx="2" />
+          <rect x="420" y="340" width="10" height="20" rx="2" />
+          <rect x="440" y="340" width="10" height="20" rx="2" />
+        </g>
 
-<section id="projects">
-  <h2>Key Projects</h2>
+        <!-- Traces -->
+        <g class="chip-traces">
+          <path d="M320 260 H200 V150" />
+          <path d="M480 260 H600 V100" />
+          <path d="M320 300 H180 V380" />
+          <path d="M480 300 H650 V450" />
+          <path d="M360 340 V420 H260" />
+          <path d="M440 340 V430 H540" />
+        </g>
+      </svg>
+    </div>
 
-  <!-- Sri Haram -->
-  <div class="project-card highlight">
-    <h3>Sri Haram – Concept Architecture for Learning AI Hardware Core</h3>
-    <ul>
-      <li>Proposed conceptual hardware architecture integrating digital logic with emerging computing paradigms for adaptive learning.</li>
-      <li>Defined modular blocks for learning engine, decision logic, memory management, and control unit inspired by brain-inspired models.</li>
-      <li>Created high-level RTL block diagrams and dataflow for future AI accelerator chips.</li>
-      <li>Studied nanoscale device integration with CMOS-based control logic for scalable intelligent hardware.</li>
-    </ul>
-    <p><b>Focus:</b> AI Accelerator • Nano-scale Integration • Learning Hardware</p>
-  </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__eyebrow">Digital Design & VLSI Engineer</p>
+          <h1 class="hero__title">
+            <span class="hero__title-main">Adhithyavaradhan</span>
+          </h1>
+          <p class="hero__subtitle">
+            <span class="typing" data-text='Designing High-Performance RTL Architectures &amp; Scalable Hardware Systems.'></span>
+            <span class="typing-cursor">|</span>
+          </p>
+          <p class="hero__summary">
+            I architect, implement, and verify digital logic that powers next-generation silicon — from RTL to FPGA prototypes, with a focus on clean architectures, CDC robustness, and timing-aware design.
+          </p>
+          <div class="hero__cta">
+            <a href="resume.pdf" class="btn btn--primary" download>
+              <i class="fa-solid fa-download"></i>
+              Download Resume
+            </a>
+            <a href="#projects" class="btn btn--ghost">
+              <i class="fa-solid fa-microchip"></i>
+              View Projects
+            </a>
+          </div>
+          <div class="hero__meta">
+            <span><i class="fa-solid fa-location-dot"></i>Tamil Nadu, India</span>
+            <span><i class="fa-solid fa-envelope"></i>adhithyavaradhan@gmail.com</span>
+          </div>
+        </div>
 
-  <!-- FSM Handshake -->
-  <div class="project-card">
-    <h3>FSM-Based Handshake Data Transfer Controller</h3>
-    <ul>
-      <li>Designed valid–ready handshake controller using Mealy/Moore FSMs.</li>
-      <li>Implemented synthesizable Verilog RTL and verified using self-checking testbench.</li>
-      <li>Ensured glitch-free control signaling and protocol-compliant data transfer.</li>
-    </ul>
-    <p><b>Tools:</b> Verilog, ModelSim, Vivado</p>
-  </div>
+        <div class="hero__panel reveal">
+          <div class="hero__chip-card glass">
+            <div class="hero__chip-header">
+              <span class="hero__chip-status-dot"></span>
+              <span>Signal Overview</span>
+            </div>
+            <div class="hero__chip-body">
+              <div class="hero__signal-row">
+                <span class="hero__signal-label">RTL Design</span>
+                <span class="hero__signal-value">High-Performance</span>
+              </div>
+              <div class="hero__signal-row">
+                <span class="hero__signal-label">Clock Domains</span>
+                <span class="hero__signal-value">Multi-Clock CDC</span>
+              </div>
+              <div class="hero__signal-row">
+                <span class="hero__signal-label">Target</span>
+                <span class="hero__signal-value">Digital Design Engineer</span>
+              </div>
+              <div class="hero__signal-divider"></div>
+              <div class="hero__signal-tags">
+                <span class="tag">Verilog</span>
+                <span class="tag">SystemVerilog</span>
+                <span class="tag">FPGA</span>
+                <span class="tag">CDC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Async FIFO -->
-  <div class="project-card">
-    <h3>Asynchronous FIFO with Clock Domain Crossing</h3>
-    <ul>
-      <li>Developed dual-clock FIFO using Gray-code pointers and two-flop synchronizers.</li>
-      <li>Verified full/empty flag accuracy and data integrity under asynchronous clocks.</li>
-      <li>Achieved metastability-safe data transfer across independent clock domains.</li>
-    </ul>
-    <p><b>Tools:</b> Verilog, ModelSim</p>
-  </div>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">About</h2>
+          <p class="section__subtitle">Focused on robust, silicon-realistic digital design.</p>
+        </div>
+        <div class="about__grid">
+          <div class="about__card glass reveal">
+            <p>
+              I am a <strong>Digital Design &amp; VLSI Engineer</strong> specializing in
+              <strong>RTL architecture, FPGA implementation, clock domain crossing, and digital arithmetic design</strong>.
+              I enjoy translating specifications into clean, verifiable hardware that is timing-aware, scalable, and integration-ready.
+            </p>
+            <p>
+              My work spans from <strong>micro-architecting datapaths and control logic</strong> to
+              <strong>FPGA bring-up and simulation-based verification</strong>, always with a focus on
+              signal integrity, reset strategy, CDC safety, and implementation feasibility.
+            </p>
+            <p>
+              I am actively pursuing a role as a <strong>Digital Design Engineer in the semiconductor industry</strong>,
+              contributing to teams building high-performance SoCs, AI accelerators, and complex digital subsystems.
+            </p>
+          </div>
+          <div class="about__meta glass reveal">
+            <div class="about__meta-item">
+              <span class="about__meta-label">Primary Focus</span>
+              <span class="about__meta-value">RTL &amp; FPGA Digital Design</span>
+            </div>
+            <div class="about__meta-item">
+              <span class="about__meta-label">Strong Domains</span>
+              <span class="about__meta-value">FSM, CDC, Arithmetic, Integration</span>
+            </div>
+            <div class="about__meta-item">
+              <span class="about__meta-label">Goal Role</span>
+              <span class="about__meta-value">Digital Design Engineer (NVIDIA / Intel / AMD / Qualcomm)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Pipelined ALU -->
-  <div class="project-card">
-    <h3>Parameterized Pipelined ALU</h3>
-    <ul>
-      <li>Designed parameterized pipelined ALU supporting configurable data widths.</li>
-      <li>Reduced critical path delay through pipeline stage insertion.</li>
-      <li>Validated throughput improvement using synthesis and timing analysis.</li>
-    </ul>
-    <p><b>Tools:</b> Verilog, Vivado</p>
-  </div>
+    <!-- Skills Section -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Skills</h2>
+          <p class="section__subtitle">Depth in RTL, CDC, arithmetic, and FPGA flows.</p>
+        </div>
 
-  <!-- RTL Integration -->
-  <div class="project-card">
-    <h3>RTL Subsystem Integration Practice</h3>
-    <ul>
-      <li>Integrated multiple RTL modules at top-level hierarchy.</li>
-      <li>Resolved interface mismatches and hierarchical connectivity issues.</li>
-      <li>Practiced SoC-style module integration and release-ready RTL structuring.</li>
-    </ul>
-    <p><b>Tools:</b> Verilog, ModelSim</p>
-  </div>
+        <div class="skills__grid">
+          <!-- Skill Card -->
+          <article class="skill-card glass reveal">
+            <div class="skill-card__header">
+              <h3>Verilog / SystemVerilog</h3>
+              <span class="skill-card__level">Advanced</span>
+            </div>
+            <p class="skill-card__desc">
+              RTL coding for datapath and control, parameterized modules, synthesizable constructs, and verification-friendly code style.
+            </p>
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-fill" style="--level: 0.9;"></div>
+            </div>
+          </article>
 
-</section>
+          <article class="skill-card glass reveal">
+            <div class="skill-card__header">
+              <h3>RTL Design &amp; FSM</h3>
+              <span class="skill-card__level">Advanced</span>
+            </div>
+            <p class="skill-card__desc">
+              Micro-architecture of control/state machines, handshake protocols, pipeline control, and modular RTL partitioning.
+            </p>
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-fill" style="--level: 0.9;"></div>
+            </div>
+          </article>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: adhithyavaradhan@gmail.com</p>
-  <p>Phone: +91 9442384936</p>
-  <p>Location: Tamil Nadu, India</p>
-</section>
+          <article class="skill-card glass reveal">
+            <div class="skill-card__header">
+              <h3>Clock Domain Crossing (CDC)</h3>
+              <span class="skill-card__level">Strong</span>
+            </div>
+            <p class="skill-card__desc">
+              Asynchronous FIFOs, handshake synchronizers, metastability mitigation, and safe multi-clock interfaces.
+            </p>
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-fill" style="--level: 0.85;"></div>
+            </div>
+          </article>
 
-<footer>
-  <p>© 2026 Adhithyavaradhan | VLSI Portfolio</p>
-</footer>
+          <article class="skill-card glass reveal">
+            <div class="skill-card__header">
+              <h3>Digital Arithmetic Architecture</h3>
+              <span class="skill-card__level">Strong</span>
+            </div>
+            <p class="skill-card__desc">
+              Adders, multipliers, pipelined ALUs, fixed-point operations, and area-performance trade-offs.
+            </p>
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-fill" style="--level: 0.85;"></div>
+            </div>
+          </article>
 
-<script src="script.js"></script>
+          <article class="skill-card glass reveal">
+            <div class="skill-card__header">
+              <h3>CMOS &amp; VLSI Concepts</h3>
+              <span class="skill-card__level">Solid</span>
+            </div>
+            <p class="skill-card__desc">
+              Transistor-level intuition, timing, power-awareness, and implementation-driven digital design decisions.
+            </p>
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-fill" style="--level: 0.8;"></div>
+            </div>
+          </article>
+
+          <article class="skill-card glass reveal">
+            <div class="skill-card__header">
+              <h3>FPGA (Xilinx Vivado)</h3>
+              <span class="skill-card__level">Strong</span>
+            </div>
+            <p class="skill-card__desc">
+              Synthesis, implementation, constraints, timing analysis, debug (ILA), and board-level bring-up.
+            </p>
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-fill" style="--level: 0.85;"></div>
+            </div>
+          </article>
+
+          <article class="skill-card glass reveal">
+            <div class="skill-card__header">
+              <h3>ModelSim Simulation</h3>
+              <span class="skill-card__level">Strong</span>
+            </div>
+            <p class="skill-card__desc">
+              Testbench creation, waveform debug, corner-case exploration, and functional validation.
+            </p>
+            <div class="skill-card__meter">
+              <div class="skill-card__meter-fill" style="--level: 0.8;"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Projects</h2>
+          <p class="section__subtitle">Selected work across AI cores, RTL controllers, and CDC architectures.</p>
+        </div>
+
+        <!-- Project Filters -->
+        <div class="projects__filters reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ai">AI / Accelerator</button>
+          <button class="filter-btn" data-filter="rtl">RTL Design</button>
+          <button class="filter-btn" data-filter="cdc">CDC / Async</button>
+          <button class="filter-btn" data-filter="fpga">FPGA / Prototype</button>
+        </div>
+
+        <div class="projects__grid">
+          <!-- Highlight Project -->
+          <article class="project-card project-card--highlight glass reveal" data-category="ai rtl fpga">
+            <div class="project-card__header">
+              <h3>Sri Haram – Concept Architecture for Learning AI Hardware Core</h3>
+              <div class="project-card__tags">
+                <span class="tag tag--accent">AI Accelerator</span>
+                <span class="tag">Nano Integration</span>
+                <span class="tag">Learning Core</span>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__desc">
+                <p>
+                  Conceptual micro-architecture for a <strong>learning-oriented AI hardware core</strong>, focusing on efficient
+                  datapath design, configurable arithmetic units, and scalable interconnect fabric suitable for
+                  nano-scale integration.
+                </p>
+                <p>
+                  Defined module boundaries, <strong>pipeline stages, memory access patterns, and control FSMs</strong> with
+                  an emphasis on reuse, parameterization, and power-aware operation modes.
+                </p>
+                <ul class="project-card__bullets">
+                  <li>Designed parameterized MAC datapaths and configurable precision arithmetic blocks.</li>
+                  <li>Outlined on-chip buffer hierarchy and bandwidth-aware dataflow.</li>
+                  <li>Defined integration strategy for scaling to multi-core AI tiles.</li>
+                </ul>
+                <div class="project-card__meta">
+                  <div>
+                    <span class="project-card__label">Tools / Domains</span>
+                    <span class="project-card__value">Verilog, RTL Micro-architecture, Digital Arithmetic, High-Level Architecture</span>
+                  </div>
+                  <div>
+                    <span class="project-card__label">Focus</span>
+                    <span class="project-card__value">AI-centric datapath design &amp; scalable control</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Visual Block Diagram Placeholder -->
+              <div class="project-card__diagram">
+                <div class="diagram">
+                  <div class="diagram__block diagram__block--core">Learning Core</div>
+                  <div class="diagram__block diagram__block--mac">MAC Array</div>
+                  <div class="diagram__block diagram__block--ctrl">Control &amp; FSM</div>
+                  <div class="diagram__block diagram__block--mem">On-Chip Buffers</div>
+                  <div class="diagram__trace diagram__trace--1"></div>
+                  <div class="diagram__trace diagram__trace--2"></div>
+                  <div class="diagram__trace diagram__trace--3"></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Other Projects -->
+          <article class="project-card glass reveal" data-category="rtl cdc fpga">
+            <div class="project-card__header">
+              <h3>FSM-Based Handshake Data Transfer Controller</h3>
+              <div class="project-card__tags">
+                <span class="tag">FSM</span>
+                <span class="tag">Handshake Protocol</span>
+                <span class="tag">RTL</span>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <p>
+                Designed a <strong>finite state machine controller</strong> implementing robust ready/valid style
+                handshake for data transfer between producer and consumer blocks with back-pressure support.
+              </p>
+              <ul class="project-card__bullets">
+                <li>Implemented clean, one-hot encoded FSM with clear state transitions.</li>
+                <li>Handled stalls, retries, and graceful reset behavior.</li>
+                <li>Verified using ModelSim with directed and corner-case scenarios.</li>
+              </ul>
+              <div class="project-card__meta">
+                <div>
+                  <span class="project-card__label">Tools</span>
+                  <span class="project-card__value">Verilog, ModelSim</span>
+                </div>
+                <div>
+                  <span class="project-card__label">Key Outcomes</span>
+                  <span class="project-card__value">Glitch-free control, deterministic protocol behavior</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" data-category="cdc rtl">
+            <div class="project-card__header">
+              <h3>Asynchronous FIFO with Clock Domain Crossing</h3>
+              <div class="project-card__tags">
+                <span class="tag tag--accent">CDC</span>
+                <span class="tag">Async FIFO</span>
+                <span class="tag">Multi-Clock</span>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <p>
+                Implemented an <strong>asynchronous FIFO</strong> for safe data transfer between unrelated clock domains,
+                emphasizing metastability mitigation and robust full/empty detection.
+              </p>
+              <ul class="project-card__bullets">
+                <li>Used Gray-code pointer techniques and double-flop synchronizers.</li>
+                <li>Verified boundary conditions (near full/empty, wraparound).</li>
+                <li>Designed with synthesis and physical implementation in mind.</li>
+              </ul>
+              <div class="project-card__meta">
+                <div>
+                  <span class="project-card__label">Tools</span>
+                  <span class="project-card__value">Verilog, ModelSim</span>
+                </div>
+                <div>
+                  <span class="project-card__label">Key Outcomes</span>
+                  <span class="project-card__value">CDC-safe data path suitable for SoC integration</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" data-category="rtl fpga">
+            <div class="project-card__header">
+              <h3>Parameterized Pipelined ALU</h3>
+              <div class="project-card__tags">
+                <span class="tag">Arithmetic</span>
+                <span class="tag">Pipelined ALU</span>
+                <span class="tag">Parameterized</span>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <p>
+                Developed a <strong>parameterized ALU</strong> with pipeline stages and configurable width,
+                supporting arithmetic and logical operations for integration into larger datapaths.
+              </p>
+              <ul class="project-card__bullets">
+                <li>Designed for scalability across multiple bit-widths and operation sets.</li>
+                <li>Balanced pipeline stages for throughput and timing closure.</li>
+                <li>Validated functionality and latency using simulation waveforms.</li>
+              </ul>
+              <div class="project-card__meta">
+                <div>
+                  <span class="project-card__label">Tools</span>
+                  <span class="project-card__value">Verilog, ModelSim, Vivado (timing checks)</span>
+                </div>
+                <div>
+                  <span class="project-card__label">Key Outcomes</span>
+                  <span class="project-card__value">Reusable ALU IP for multiple designs</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal" data-category="rtl fpga">
+            <div class="project-card__header">
+              <h3>RTL Subsystem Integration Practice</h3>
+              <div class="project-card__tags">
+                <span class="tag">Integration</span>
+                <span class="tag">Subsystem</span>
+                <span class="tag">RTL</span>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <p>
+                Practiced <strong>integrating multiple RTL blocks</strong> (controllers, datapaths, FIFOs) into a cohesive subsystem with
+                aligned interfaces, resets, and clocking strategies.
+              </p>
+              <ul class="project-card__bullets">
+                <li>Standardized bus interfaces and signal naming for readability.</li>
+                <li>Implemented top-level glue logic and integrated testbench.</li>
+                <li>Analyzed timing and resource utilization on FPGA target.</li>
+              </ul>
+              <div class="project-card__meta">
+                <div>
+                  <span class="project-card__label">Tools</span>
+                  <span class="project-card__value">Verilog, ModelSim, Xilinx Vivado</span>
+                </div>
+                <div>
+                  <span class="project-card__label">Key Outcomes</span>
+                  <span class="project-card__value">System-level perspective on RTL design</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section section--alt">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Certifications</h2>
+          <p class="section__subtitle">Building a solid, industry-aligned foundation.</p>
+        </div>
+
+        <!-- Timeline layout; add/adjust items as you complete certifications -->
+        <div class="timeline">
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__content glass">
+              <h3 class="timeline__title">VLSI / Digital Design Certification</h3>
+              <p class="timeline__meta">Institution / Platform – Year</p>
+              <p class="timeline__desc">
+                Focused on digital design fundamentals, combinational and sequential logic, timing concepts,
+                and introductory HDL-based design flows.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__content glass">
+              <h3 class="timeline__title">FPGA / RTL Design with Verilog</h3>
+              <p class="timeline__meta">Institution / Platform – Year</p>
+              <p class="timeline__desc">
+                Hands-on exposure to FPGA toolchains, synthesis, implementation, constraint definition,
+                and RTL-to-bitstream workflows using Verilog.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__content glass">
+              <h3 class="timeline__title">ASIC / SoC Design Fundamentals</h3>
+              <p class="timeline__meta">Institution / Platform – Year</p>
+              <p class="timeline__desc">
+                Introduction to ASIC design methodology, from RTL to GDSII, including clocking,
+                power considerations, and verification flows.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="timeline__note reveal">
+          * Replace placeholders with your actual certifications, platforms, and dates for recruiters.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section__header reveal">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__subtitle">Open to digital design &amp; VLSI opportunities.</p>
+        </div>
+
+        <div class="contact__wrapper">
+          <div class="contact__card glass reveal">
+            <div class="contact__row">
+              <span class="contact__label"><i class="fa-solid fa-envelope"></i>Email</span>
+              <a href="mailto:adhithyavaradhan@gmail.com" class="contact__value">adhithyavaradhan@gmail.com</a>
+            </div>
+            <div class="contact__row">
+              <span class="contact__label"><i class="fa-solid fa-phone"></i>Phone</span>
+              <span class="contact__value">+91-XXXXXXXXXX</span> <!-- Replace with your number -->
+            </div>
+            <div class="contact__row">
+              <span class="contact__label"><i class="fa-brands fa-linkedin"></i>LinkedIn</span>
+              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer" class="contact__value">
+                linkedin.com/in/your-profile
+              </a>
+            </div>
+            <div class="contact__row">
+              <span class="contact__label"><i class="fa-brands fa-github"></i>GitHub</span>
+              <a href="https://github.com/your-github" target="_blank" rel="noreferrer" class="contact__value">
+                github.com/your-github
+              </a>
+            </div>
+
+            <button class="btn btn--primary contact__btn">
+              <i class="fa-solid fa-handshake-angle"></i>
+              Let's Collaborate
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>&copy; <span id="year"></span> Adhithyavaradhan. All rights reserved.</span>
+      <span class="footer__note">Designed for semiconductor-industry roles.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
